@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/responsive-portfolio.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="JS/jquery-3.5.1.min.js"></script>
+    <script>
+        /*    jQuery    */
+        $(function(){
+            $(window).scroll(function (){
+                $('.toLeft , .toRight , .toTop').each(function(){
+                    var elemPos = $(this).offset().top,
+                        scroll = $(window).scrollTop(),
+                        windowHeight = $(window).height();
+                    if (scroll > elemPos - windowHeight + 300){
+                        $(this).addClass('fadein');
+                    }
+                });
+            });
+            $('a[href^="#"]').click(function(){
+                var header = $('header').height();
+                var speed = 400;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top - header;
+                $('body,html').animate({scrollTop:position}, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+    <title>Mizuki | Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header-left">
+                <a href="#profile" class="mtxt">PROFILE</a>
+                <a href="#services" class="mtxt">SERVICES</a>
+            </div>
+            <div class="header-center">
+                <h1 class="ltxt">MY PORTFOLIO</h1>
+            </div>
+            <div class="header-right">
+                <a href="#works" class="mtxt">WORKS</a>
+                <a href="#contact" class="mtxt">CONTACT</a>
+            </div>
+        </div>
+        <!--タブレット、スマホ用-->
+        <div class="tablet-menu">
+            <div class="tablet-center">
+                <h1 class="ltxt">MY<br>PORTFOLIO</h1>
+            </div>
+            <div class="header-contact">
+                <a href="#contact">CONTACT</a>
+            </div>    
+        </div>
+    </header>
+    <main>
+        <div class="top">
+            <div class="top-catch">
+                <p class="ltxt">丁寧で確実な仕事を心掛けます。</p>
+                <p class="mtxt">まだまだ経験は浅いですが、
+                    <br>出来ることを確実に行っていきたいと思います。
+                    <br>ご満足いただけるよう最善を尽くし、ご要望にお答えいたします。
+                    <br>また、ご縁を頂けるようでしたら、
+                    <br>コンタクトフォームからご連絡をお願いします。
+                </p>
+                <div class="contact-bottan">
+                    <a href="#contact">コンタクトフォームは
+                        <br>こちら
+                    </a>
+                </div>    
+            </div>
+        </div>
+        <div class="profile wrapper" id="profile">
+            <div class="title-img">
+                <p><img src="image/profile1.png" class="section-title-lside"></p>
+            </div>
+            <div class="container toLeft">
+                <div class="contents">
+                    <div class="profile-img">
+                        <img src="image/profile_img.jpg" class="profile-image">
+                        <!--スマホ用-->
+                        <img src="image/profile_image_sp.jpg" class="sp-profile-image">
+                    </div>
+                    <div class="profile-text">
+                        <div class="profile-contents">
+                            <p class="stxt rubi">コバヤシ　ミヅキ</p>
+                            <p class="ltxt name">小林　三騎</p>
+                            <p class="mtxt name">WEBコーダー</p>
+                            <p class="mtxt">2000年生まれ、神奈川県在住の大学生。</p>
+                            <br>
+                            <p class="mtxt">2020年9月より独学でプログラミング学習を開始。</p>
+                            <br>
+                            <p class="mtxt">迅速、丁寧なコミュニケーションを心掛け、ご納得いただけるような商品を提供します。</p>
+                            <p class="ltxt skills">SKILLS</p>
+                            <div class="skills-icon">
+                                <i class="fab fa-html5 fa-3x"></i>
+                                <i class="fab fa-css3-alt fa-3x"></i>
+                                <i class="fab fa-sass fa-3x"></i>
+                                <i class="fab fa-js-square fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services wrapper" id="services">
+            <div class="services-contents container toRight">
+                <div class="contents">
+                    <div class="service">
+                        <i class="fas fa-laptop fa-4x"></i>
+                        <p class="ltxt">HP・LP作成</p>
+                        <p class="mtxt">料金：40000円～</p>
+                        <p class="stxt">ホームページやランディングページの1からの作成も承っております。
+                            <br>事前にお渡しするヒヤリングシートをもとに依頼者様の希望通りに作成いたします。
+                            <br>また、メールやお電話での対応も可能ですので当サイト下部のコンタクトフォームからお申し込みください。</p>
+                    </div>
+                    <div class="service">
+                        <i class="far fa-keyboard fa-4x"></i>
+                        <p class="ltxt">コーディング</p>
+                        <p class="mtxt">料金：10000円～</p>
+                        <p class="stxt">お渡しされたデザインカンプ等をもとにコーディングさせていただきます。
+                            <br>デザインカンプ以外にも、手書きのページデザインやイメージするサイトをもとに作成することも可能です。
+                            <br>レスポンシブ対応にすることも可能です。
+                        </p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-tablet-alt fa-4x"></i>
+                        <p class="ltxt">メンテナンス</p>
+                        <p class="mtxt">料金：5000円～</p>
+                        <p class="stxt">既存のWebページの画像、テキストの差し替え、レスポンシブ対応などのメンテナンスを行います。</p>
+                    </div>
+                </div>
+            </div>
+             <div class="services-img">
+                <p><img src="image/services.png" class="section-title-rside"></p>
+            </div>
+        </div>
+        <div class="works"  id="works">
+            <div class="works-title">
+                <p><img src="image/wwws.png" class="section-title"></p>
+            </div>
+            <div class="works-contents">
+                <div class="contents toTop">
+                    <div class="airbnb work">
+                        <a href="work/airbnb-mosha-work.html">
+                            <p class="stxt">Airbnb様(サイト模写)</p>
+                            <img src="image/airbnb.png">
+                        </a>
+                    </div>
+                    <div class="isara work">
+                        <a href="work/isara-mosha-work.html">
+                            <p class="stxt">iSARA様(サイト模写)</p>
+                            <img src="image/isara.png">
+                        </a>
+                    </div>
+                    <div class="work portfolio-site">
+                        <a href="work/portfolio-site-work.html">
+                            <p class="stxt">ポートフォリオサイト</p>
+                        <img src="image/portfolio.png">
+                    </a>
+                    </div>
+                </div>
+                    
+                <div class="seeMore work">
+                    <a href="works.html" class="mtxt">see more...</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact" id="contact">
+            <div class="contact-img">
+                <p><img src="image/contact.png" class="section-title"></p>
+            </div>
+            <div class="contact-contents">
+                <div class="content">
+                    <div class="content-txt">
+                        <p class="mtxt">ホームページ、ランディングページの作成や既存のページの更新、レスポンシブ対応など柔軟に対応させていただきます。</p>
+                        <p class="mtxt">お問い合わせは下のGoogleフォーム、またはgメールからお願いいたします。</p>
+                        <p class="mtxt">また、お問い合わせ頂いた当日、または翌日には必ず返事を返させていただきます。</p>
+                        <p class="mtxt">お気軽にご相談ください！</p>
+                    </div>
+                    <div class="contact-form">
+                        <div class="form">
+                            <a href="https://forms.gle/hLBFrvchHuezqbKY8"><i class="fab fa-google fa-5x"></i></a>
+                        </div>
+                        <!--タブレット用-->
+                        <div class="tab-form">
+                            <a href="https://forms.gle/hLBFrvchHuezqbKY8"><i class="fab fa-google fa-4x"></i></a>
+                        </div>
+                        <!--スマホ用-->
+                        <div class="sp-form">
+                            <a href="https://forms.gle/hLBFrvchHuezqbKY8"><i class="fab fa-google fa-3x"></i></a>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <p class="mtxt">mizukikobayashi22@gmail.com</p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foot-wrapper">
+            <div class="foot-contents">
+                <p class="stxt">Copyright &copy; 2020 MizukiKobayashi All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
