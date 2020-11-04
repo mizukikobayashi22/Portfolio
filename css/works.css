@@ -1,0 +1,194 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", 游ゴシック, "Yu Gothic", 游ゴシック;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+/*色の変数*/
+/*文字のサイズ、太さ*/
+.ltxt {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.mtxt {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.stxt {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.works {
+  width: 100%;
+}
+
+.works .works-title {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.works .works-title img {
+  border-bottom: 1px solid #bbbcc4;
+  border-top: 1px solid #bbbcc4;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.works .works-contents {
+  background-color: #014c86;
+}
+
+.works .works-contents .contents {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.works .works-contents .contents .work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px;
+  padding: 20px;
+  background-color: #F1F0E2;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.works .works-contents .contents .work a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.works .works-contents .contents .work a:hover {
+  opacity: 0.5;
+}
+
+.works .works-contents .contents .work img {
+  padding: 10px;
+  border: 1px solid #bbbcc4;
+  width: auto;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.works .works-contents .contents .work .workDetail {
+  padding-left: 20px;
+}
+
+.works .works-contents .contents .work .workDetail .workSkills {
+  padding-top: 25px;
+  color: #014c86;
+}
+
+.returnPage {
+  background-color: #014c86;
+  text-align: center;
+}
+
+.returnPage .returnPage-wrapper {
+  display: inline-block;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 0.5px solid #bbbcc4;
+}
+
+.returnPage .returnPage-wrapper a {
+  color: white;
+}
+
+.returnPage .returnPage-wrapper:hover {
+  background-color: #bbbcc4;
+  -webkit-transition: 1.6s;
+  transition: 1.6s;
+}
+
+footer {
+  background-color: #014c86;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+footer .foot-contents {
+  margin: 0 auto;
+  width: 90%;
+  padding: 40px 0 25px 0;
+  border-top: 1px solid #bbbcc4;
+  color: #F1F0E2;
+}
+
+@media all and (max-width: 980px) {
+  .ltxt {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .mtxt {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .stxt {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .section-title {
+    width: 560px;
+    height: auto;
+  }
+  .works .works-contents .contents {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .ltxt {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .mtxt {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .stxt {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .section-title {
+    width: 400px;
+    height: auto;
+  }
+  .works .works-contents .contents {
+    width: 90%;
+  }
+  .works .works-contents .contents .work {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .returnPage .returnPage-wrapper {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=works.css.map */
